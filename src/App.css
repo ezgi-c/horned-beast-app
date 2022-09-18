@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.Header, .Footer {
+  background-color:#77A35F;
+  height: 4em;
+  padding: 1em;
+  color: white;
+}
+
+.Main > h2 {
+  color : #77A35F;
+}
+
 img {
   width: 200px;
+  border: solid 2px #77A35F;
 }

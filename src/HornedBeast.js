@@ -1,7 +1,7 @@
 import React from "react";
 
 
-class Beast extends React.Component {
+class HornedBeast extends React.Component {
     render() {
         return (
             <>
@@ -13,4 +13,4 @@ class Beast extends React.Component {
     }
 }
 
-export default Beast;
+export default HornedBeast;
