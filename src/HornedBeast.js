@@ -1,10 +1,12 @@
 import React from "react";
 
+
 class Beast extends React.Component {
     render() {
         return (
             <>
-                <h3>{this.props.title}</h3>
+                <h2>{this.props.title}</h2>
+                <img src={this.props.imageUrl} alt={this.props.title} title={this.props.title} />
                 <p>{this.props.description}</p>
             </>
         )
