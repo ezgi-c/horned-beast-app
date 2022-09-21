@@ -1,19 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .App {
   text-align: center;
 }
 
 .Header, .Footer {
-  background-color:#77A35F;
-  height: 4em;
+  background-color:#965fa3;
+  height: 10em;
   padding: 1em;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.Main > h2 {
-  color : #77A35F;
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
 }
 
-img {
-  width: 200px;
-  border: solid 2px #77A35F;
+.Main {
+  margin: 5em;
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  grid-template-rows: auto; 
+  column-gap: 15px;
+  row-gap: 15px;
+  justify-content: center;
 }
