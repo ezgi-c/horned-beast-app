@@ -90,7 +90,7 @@ Actual time needed to complete: not sure, I completed this while following along
 
 Number and name of feature: Stretch Goal: Add Interaction
 Estimate of time needed to complete: 30-60 mins
-Start time: 9:55pm
+Start time: 9:55pm, 830pm
 Finish time: 10:44
 Actual time needed to complete: 50 mins
 
