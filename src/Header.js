@@ -31,9 +31,9 @@ class Header extends React.Component {
         onClick={this.handleClick}
       >
         {this.state.colorSwitch ?
-        <h1 id="pink-header">🦄 Gallery of Horns 🦄</h1>
+        <h1 id="pink-header">🦄 Ezgi's Gallery of Horns 🦄</h1>
         :
-        <h1 id="rainbow-header">🦄 Gallery of Horns 🦄</h1>
+        <h1 id="rainbow-header">🦄 Ezgi's Gallery of Horns 🦄</h1>
       }
       </div>
     );
