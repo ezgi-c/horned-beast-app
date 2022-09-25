@@ -1,6 +1,7 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
 import Row from "react-bootstrap/Row";
+import FuzzySearch from "./FuzzySearch";
 
 class Main extends React.Component {
   constructor(props) {
@@ -9,9 +10,13 @@ class Main extends React.Component {
     handleShowModal: this.props.handleShowModal,
     };
   }
+
+
+
   render() {
     return (
       <div className="Main">
+        <FuzzySearch/>
         <Row xs={1} sm={2} md={3} lg={4} >
           {this.props.data.map((beast) => (
             <HornedBeast

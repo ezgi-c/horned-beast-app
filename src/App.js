@@ -5,6 +5,7 @@ import Main from "./Main";
 import Footer from "./Footer";
 import data from "./data.json";
 import BeastModal from "./BeastModal";
+import Form from 'react-bootstrap/Form';
 
 class App extends React.Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class App extends React.Component {
         data={this.data} 
         handleShowModal={this.handleShowModal} 
         />
+
         <BeastModal
           show={this.state.showBeastModal}
           handleClose={this.handleCloseModal}

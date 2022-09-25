@@ -94,3 +94,16 @@ Start time: 9:55pm, 830pm
 Finish time: 10:44, 9pm
 Actual time needed to complete: 1 hour 20 mins
 
+LAB 03
+
+Number and name of feature: Feature #1: Display a Modal
+Estimate of time needed to complete: 2 hours
+Start time: 2:00pm
+Finish time: 5:00pm
+Actual time needed to complete: 3 hours
+
+Number and name of feature: Stretch Goal: Fuzzy Search
+Estimate of time needed to complete: 30-60 mins
+Start time: 8:10 pm
+Finish time: 8:40 pm
+Actual time needed to complete: 30 mins (not complete)
