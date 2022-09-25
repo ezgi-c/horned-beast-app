@@ -1,41 +1,53 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
+import { Card, Button } from 'react-bootstrap';
 import Container from "react-bootstrap/Container";
+import Col from 'react-bootstrap/Col';
+
+
 
 class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorites: "",
-      clicks: 1,
-      // Q: why doesnt it work when it's 0?
+      favorites: 0,
     };
   }
 
-  handleClick = () => {
-      this.setState({ clicks: this.state.clicks + 1})
-      this.setState({ favorites: "💜" + this.state.clicks });
-    };
+  addFavorites = () => {
+    this.setState({ favorites: this.state.favorites + 1 });
+  };
+
+  capturesSelectedBeast = () => this.props.handleShowModal(this.props.title);
+  
 
   render() {
     return (
-      <Container className="Cards">
-        <Card style={{ width: "18rem" }}>
+      <Col className="p-4">
+      <Container className="h-100">
+        <Card id="beast" className="h-100">
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
-            <Card.Text>Favorites: {this.state.favorites}</Card.Text>
+            <Card.Text>🦄: {this.state.favorites}</Card.Text>
 
-            <Card.Img
+            <Card.Img className="cardImg"
               variant="top"
               src={this.props.imageUrl}
               alt={this.props.description}
               title={this.props.title}
-              onClick={this.handleClick}
-            />
+              onClick={this.addFavorites}
+            />        
+           
           </Card.Body>
+          <Card.Footer>
+          <Button className="button"
+             onClick={this.capturesSelectedBeast}>
+              🔍
+            </Button>
+          </Card.Footer>
         </Card>
       </Container>
+      </Col>
     );
   }
 }

@@ -4,37 +4,6 @@
   text-align: center;
 }
 
-.Footer {
-  background-color:#965fa3;
-  height: 10em;
-  padding: 1em;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  font-family: 'Lobster', cursive;
-  font-size: 5em;
-  color: white;
-  padding: .5em;
-}
-
-.Main {
-  margin: 5em;
-  display: grid;
-  grid-template-columns: auto auto auto auto ;
-  grid-template-rows: auto; 
-  column-gap: 15px;
-  row-gap: 15px;
-  justify-content: center;
-}
-
-h1 {
-  width:100%;
-  height: 2em;
-}
 #pink-header {
   background-color: #965fa3;
 }
@@ -43,3 +12,68 @@ h1 {
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
 }
 
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+  color: white;
+  padding: .5em;
+  width:100%;
+  height: 2.5em;
+}
+
+.Main {
+  margin: 4em;
+  margin-top: 2em;
+}
+
+#beast {
+  border: 15px solid  #8073c6;
+  background-color: #fbfbd7;
+  color:#5541c7;
+}
+
+.cardImg:hover {
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🦄</text></svg>")
+  16 0, auto;
+}
+/* cursor from dev.to */
+
+.cardImg:active{
+  border:groove;
+}
+
+.beastModal{
+  text-align: center;
+}
+
+.beastModalTitle{
+  text-align: center;
+}
+
+.beastModalImg {
+  width: 450px;
+  padding-top: 3em;
+}
+
+.button {
+  background-color: #fbfbd7;
+  border: none;
+}
+
+.button:hover {
+  background-color: #c673c2;
+  cursor: zoom-in;
+}
+
+.mb-3 {
+  margin-bottom: 4em;
+}
+
+.Footer {
+  background-color:#965fa3;
+  height: 8em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
