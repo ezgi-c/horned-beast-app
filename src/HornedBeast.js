@@ -1,7 +1,8 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
+import { Card, Button } from 'react-bootstrap';
 import Container from "react-bootstrap/Container";
 import Col from 'react-bootstrap/Col';
+
 
 
 class HornedBeast extends React.Component {
@@ -16,6 +17,9 @@ class HornedBeast extends React.Component {
     this.setState({ favorites: this.state.favorites + 1 });
   };
 
+  capturesSelectedBeast = () => this.props.handleShowModal(this.props.title);
+  
+
   render() {
     return (
       <Col className="p-4">
@@ -26,14 +30,21 @@ class HornedBeast extends React.Component {
             <Card.Text>{this.props.description}</Card.Text>
             <Card.Text>🦄: {this.state.favorites}</Card.Text>
 
-            <Card.Img
+            <Card.Img className="cardImg"
               variant="top"
               src={this.props.imageUrl}
               alt={this.props.description}
               title={this.props.title}
               onClick={this.addFavorites}
-            />
+            />        
+           
           </Card.Body>
+          <Card.Footer>
+          <Button className="button"
+             onClick={this.capturesSelectedBeast}>
+              🔍
+            </Button>
+          </Card.Footer>
         </Card>
       </Container>
       </Col>
