@@ -10,9 +10,6 @@ class Main extends React.Component {
     handleShowModal: this.props.handleShowModal,
     };
   }
-
-
-
   render() {
     return (
       <div className="Main">
@@ -20,6 +17,7 @@ class Main extends React.Component {
         <Row xs={1} sm={2} md={3} lg={4} >
           {this.props.data.map((beast) => (
             <HornedBeast
+              key={beast._id}
               title={beast.title}
               imageUrl={beast.image_url}
               description={beast.description}

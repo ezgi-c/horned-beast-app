@@ -4,26 +4,25 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import data from "./data.json";
-import BeastModal from "./BeastModal";
-import Form from 'react-bootstrap/Form';
+import SelectedBeast from "./SelectedBeast";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.data = data;
     this.state = {
-      showBeastModal: false,
+      show: false,
       selectedBeast: {},
     };
   }
 
   handleCloseModal = () => {
-    this.setState({ showBeastModal: false });
+    this.setState({ show: false });
   };
 
   handleShowModal = (beastTitle) => {
     const selectedBeast = data.find(beastObj => beastObj.title === beastTitle);
-    this.setState({ showBeastModal: true, selectedBeast: selectedBeast });
+    this.setState({ show: true, selectedBeast });
   };
 
   render() {
@@ -31,12 +30,12 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Main 
-        data={this.data} 
+        data={data} 
         handleShowModal={this.handleShowModal} 
         />
 
-        <BeastModal
-          show={this.state.showBeastModal}
+        <SelectedBeast
+          show={this.state.show}
           handleClose={this.handleCloseModal}
           selectedBeast={this.state.selectedBeast}
         />

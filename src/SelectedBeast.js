@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
 
-class BeastModal extends React.Component {
+class SelectedBeast extends React.Component {
   render() {
     return (
       <Modal show={this.props.show} onHide={this.props.handleClose}>
@@ -18,6 +18,7 @@ class BeastModal extends React.Component {
             src={this.props.selectedBeast.image_url}
             alt={this.props.selectedBeast.description}
             title={this.props.selectedBeast.title}
+            fluid 
           />
         </Modal.Body>
         <Modal.Footer>
@@ -30,4 +31,4 @@ class BeastModal extends React.Component {
   }
 }
 
-export default BeastModal;
+export default SelectedBeast;
