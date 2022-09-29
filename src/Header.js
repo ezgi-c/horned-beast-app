@@ -11,12 +11,12 @@ class Header extends React.Component {
 
   handleClick = () => {
     if (this.state.colorSwitch === true) {
-      console.log("made it inside if statement");
+      // console.log("made it inside if statement");
       this.setState({
         colorSwitch: false,
       });
     } else {
-      console.log("made it inside else statement");
+      // console.log("made it inside else statement");
       this.setState({ colorSwitch: true });
     }
   };
