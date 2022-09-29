@@ -8,10 +8,10 @@ class HornSearch extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container className="hornform">
         <Form>
           <Form.Group className="mb-3" controlId="formHornSearch">
-            <Form.Label>Filter Beasts by Number of Horns</Form.Label>
+            <Form.Label>Filter by Number of Horns</Form.Label>
             <Form.Select onChange={this.props.handleHornSelection}>
               <option value="">All Horns</option>
               <option value="1">1</option>

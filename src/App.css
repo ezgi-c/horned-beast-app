@@ -69,6 +69,29 @@ h1 {
   margin-bottom: 4em;
 }
 
+.fuzzyform {
+  background:rgb(193, 221, 246);
+  height: 7em;
+  width:700px;
+font-weight: 600;
+padding: .5em;
+}
+
+.hornform {
+  background:rgb(252, 226, 83);
+  height: 7em;
+  width:700px;
+  font-weight: 600;
+  padding: .5em;
+}
+
+.forms {
+  width: 100%;
+  display: flex;
+  gap:5em;
+  margin: 3em auto;
+}
+
 .Footer {
   background-color:#965fa3;
   height: 8em;

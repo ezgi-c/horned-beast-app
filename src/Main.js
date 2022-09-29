@@ -3,6 +3,7 @@ import HornedBeast from "./HornedBeast";
 import Row from "react-bootstrap/Row";
 import FuzzySearch from "./FuzzySearch";
 import HornSearch from "./HornSearch";
+import { Container } from "react-bootstrap";
 
 class Main extends React.Component {
   constructor(props) {
@@ -17,7 +18,6 @@ class Main extends React.Component {
 
   handleInput = (e) => {
     e.preventDefault();
-    // const input = e.target.value;
     if (e.target.value.length > 0) {
       this.setState({ input: e.target.value });
       this.setState({
@@ -36,28 +36,32 @@ class Main extends React.Component {
   };
 
   handleHornSelection = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const selection = Number(e.target.value);
-    if (
-      selection === 1 ||
-      selection === 2 ||
-      selection === 3 ||
-      selection === 100
-    ) {
-      this.setState({
-        data: this.state.data.filter((beast) => beast.horns === selection),
-      });
-    } else {
-      this.setState({ data: this.props.data });
-    }
-  };
+    // console.log("event target value:", e.target.value);
+    selection
+      ? this.setState({
+          data: this.props.data.filter((beast) => beast.horns === selection),
+        })
+      : this.setState({ data: this.props.data });
+    };
+  // got help from Ethan to use 'selection' by itself as the condition and converting to ternary
+  // got help from TA to filter this.props.data instead of this.state.data
+
+    // if (selection) {
+    //   this.setState({ data: this.props.data.filter((beast) => beast.horns === selection) });
+    // } else {
+    //   this.setState({ data: this.props.data });
+    // }
 
   render() {
     return (
       <div className="Main">
+        <Container className="forms">
         <FuzzySearch handleInput={this.handleInput} />
         <br />
         <HornSearch handleHornSelection={this.handleHornSelection} />
+        </Container>
         <Row xs={1} sm={2} md={3} lg={4}>
           {this.state.data.map((beast) => (
             <HornedBeast
